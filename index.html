@@ -2026,6 +2026,23 @@
             
             <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
                 <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 Restaurant Avalanche Sinaia. Toate drepturile rezervate.</p>
+    <!-- Informații legale și de contact -->
+            <div class="mt-2 text-xs text-gray-500 space-y-1">
+                <p>SC Avalanche SRL | CUI: RO12345678 | Nr. Reg. Com: J29/123/2021</p>
+                <p>Strada Cuza Vodă 2B, Sinaia 106100, România</p>
+                <p>Tel: +40 744 359 059 | Email: office.avalancherestaurant@gmail.com</p>
+            </div>
+    <!-- Buton ANPC SAL -->
+                 <div class="mt-4 flex flex-wrap justify-center items-center gap-4">
+                <a href="https://anpc.ro/ce-este-sal/" target="_blank" rel="noopener">
+                    <img src="https://kitamaru.ro/images/anpc/anpc-sal.svg" alt="Soluționarea Alternativă a Litigiilor ANPC" class="h-8">
+                </a>
+
+    <!-- Buton SOL (siglă oficială) -->
+                <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">
+                     <img src="https://kitamaru.ro/images/anpc/anpc-sol.svg" alt="Soluționarea Online a Litigiilor" class="h-8">
+                </a>
+            </div>
                 <div class="flex space-x-6">
                     <a href="https://www.facebook.com/avalancherestaurantsinaia/" target="_blank" class="text-gray-400 hover:text-white transition">
                         <i class="fab fa-facebook-f"></i>
@@ -2244,5 +2261,123 @@ function toggleZoom() {
     img.style.cursor = zoomed ? 'zoom-out' : 'zoom-in';
 }
 </script>
+
+<!-- Overlay blur și modal rezumat termeni -->
+<div id="overlay" style="
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+">
+  <div id="consentModal" style="
+    background: white;
+    padding: 25px 30px;
+    border-radius: 10px;
+    max-width: 400px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    text-align: center;
+  ">
+    <h2 style="margin-top:0;">Termeni și Condiții de utilizare</h2>
+    <p>Acest site folosește Google Maps și colectează date prin formularul de rezervare.<br>Folosind site-ul, accepți <a href="#" id="readMoreLink" style="color:#0d63e4;text-decoration:underline;cursor:pointer;">Termenii și Condițiile</a>.</p>
+    <div style="margin-top: 20px;">
+      <button id="acceptBtn" style="
+        background:#0d63e4;
+        color:#fff;
+        border:none;
+        padding:10px 20px;
+        margin-right: 10px;
+        cursor:pointer;
+        border-radius: 5px;
+        font-size: 16px;
+      ">Accept termenii</button>
+    </div>
+  </div>
+</div>
+
+<!-- Fereastră modală Termeni Compleți -->
+<div id="termsModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);z-index:10001;overflow:auto;">
+  <div style="background:#fff;color:#000;max-width:600px;margin:50px auto;padding:20px;border-radius:8px;position:relative;">
+    <h2>Termeni și Condiții de utilizare și Politica de confidențialitate</h2>
+    <p><strong>Colectarea datelor personale:</strong> Prin formularul de rezervare colectăm date personale, cum ar fi numele, numărul de telefon, adresa de email și detaliile rezervării. Datele sunt folosite exclusiv pentru procesarea rezervării și nu sunt partajate cu terți.</p>
+    <p><strong>Google Maps:</strong> Site-ul încorporează Google Maps pentru afișarea locației. Google poate colecta date și seta cookie-uri conform politicii sale de confidențialitate. Nu controlăm aceste date.</p>
+    <p><strong>Drepturile tale:</strong> Ai dreptul să accesezi, să corectezi sau să ștergi datele tale personale, să te opui prelucrării acestora și să retragi consimțământul oricând, contactându-ne la adresa de email <em>office.avalancherestaurant@gmail.com</em>.</p>
+    <p><strong>Păstrarea datelor:</strong> Datele vor fi păstrate numai pe durata necesară gestionării rezervării și conform legislației în vigoare.</p>
+    <p><strong>Acceptarea termenilor:</strong> Pentru a folosi site-ul și a trimite rezervări, trebuie să accepți acești termeni și condiții.</p>
+
+    <div style="margin-top:30px; text-align:right;">
+      <button id="acceptModalBtn" style="background:#0d63e4;color:#fff;border:none;padding:10px 15px;margin-right:10px;cursor:pointer;">Accept</button>
+      <button id="rejectModalBtn" style="background:#f44336;color:#fff;border:none;padding:10px 15px;cursor:pointer;">Respinge și părăsește site-ul</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const overlay = document.getElementById('overlay');
+  const acceptBtn = document.getElementById('acceptBtn');
+  const readMoreLink = document.getElementById('readMoreLink');
+  const termsModal = document.getElementById('termsModal');
+  const acceptModalBtn = document.getElementById('acceptModalBtn');
+  const rejectModalBtn = document.getElementById('rejectModalBtn');
+
+  // Dacă s-a acceptat deja, ascundem overlay-ul
+  if(localStorage.getItem('termsAccepted') === 'true') {
+    overlay.style.display = 'none';
+  } else {
+    overlay.style.display = 'flex';
+    // Dezactivează scrollul paginii când modalul e afișat
+    document.body.style.overflow = 'hidden';
+  }
+
+  acceptBtn.onclick = () => {
+    localStorage.setItem('termsAccepted', 'true');
+    overlay.style.display = 'none';
+    document.body.style.overflow = '';
+  };
+
+  readMoreLink.onclick = (e) => {
+    e.preventDefault();
+    termsModal.style.display = 'block';
+  };
+
+  acceptModalBtn.onclick = () => {
+    localStorage.setItem('termsAccepted', 'true');
+    termsModal.style.display = 'none';
+    overlay.style.display = 'none';
+    document.body.style.overflow = '';
+  };
+
+  rejectModalBtn.onclick = () => {
+    window.location.href = 'https://www.google.com';
+  };
+
+  // Când modalul complet este deschis, dezactivăm scrollul paginii
+  termsModal.addEventListener('scroll', () => {
+    document.body.style.overflow = 'hidden';
+  });
+</script>
+
+<style>
+  @media (max-width: 480px) {
+    #termsModal div[style*="text-align:right"] button {
+      display: block;
+      width: 100%;
+      margin-bottom: 12px !important;
+    }
+  }
+</style>
+
+<style>
+  @media (max-width: 640px) {
+    /* Pe mobil, distanțăm grupul ANPC + SOL */
+    footer > div.container > div.border-t > div.mt-4 {
+      margin-bottom: 20px; /* spațiu sub ANPC + SOL */
+    }
+  }
+</style>
 </body>
 </html>
