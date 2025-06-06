@@ -21,7 +21,8 @@
         
         .hero {
             background-image: url('images/h1.jpeg');
-            background-size: cover;
+            background-size: 1970px;
+            background-repeat: no-repeat;
             background-position: center;
         }
         
@@ -52,6 +53,7 @@
         @media screen and (max-width: 768px) and (orientation: portrait) {
         .hero {
             background-image: url('images/hm1.jpeg');
+            background-size: 660px;
             }
         }
     </style>
@@ -90,8 +92,9 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="acasa" class="hero min-h-screen flex items-center justify-center text-white pt-20">
-        <div class="container mx-auto px-4 text-center">
+<section id="acasa" class="hero min-h-screen flex items-center justify-center text-white pt-20">
+    <div class="container mx-auto px-4 text-center">
+        <div class="inline-block bg-black bg-opacity-70 p-8 rounded-lg">
             <h1 class="text-4xl md:text-6xl font-bold mb-6">Bine ați venit la Avalanche</h1>
             <p class="text-xl md:text-2xl mb-8">O experiență culinară de excepție în inima munților</p>
             <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
@@ -99,25 +102,27 @@
                 <a href="#contact" class="bg-transparent border-2 border-white hover:bg-white hover:text-gray-900 text-white px-8 py-3 rounded-full font-semibold transition">Rezervă acum</a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- About Section -->
-    <section id="despre" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Despre restaurantul Avalanche</h2>
-                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+<section id="despre" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Despre restaurantul Avalanche</h2>
+            <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+        </div>  
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10 flex flex-col gap-4">
+                <img src="images/a1.jpeg" alt="Restaurant interior" class="rounded-lg shadow-xl w-full h-[550px] object-cover">
+                <img src="images/a2.jpeg" alt="Alt unghi restaurant" class="rounded-lg shadow-xl w-full h-[550px] object-cover">
             </div>
-            
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
-                    <img src="images/a1.jpeg" alt="Restaurant interior" class="rounded-lg shadow-xl w-full">
-                </div>
-                
+
                 <div class="md:w-1/2">
                     <h3 class="text-2xl font-bold text-gray-800 mb-4">O poveste de succes în Sinaia</h3>
                     <p class="text-gray-600 mb-4">Avalanche – locul unde mâncarea bună aduce oameni împreună. Suntem un restaurant de familie deschis în 2021, din pasiunea noastră pentru mâncarea cu gust, făcută cu suflet. Meniul e plin de preparatele noastre preferate – exact ce ne place și nouă să mâncăm acasă. La Avalanche găsești un loc cozy, unde vrem ca fiecare om care ne trece pragul să se simtă bine, să mănânce pe săturate și să plece mulțumit, cu zâmbetul pe buze. Aici, punem nu doar gust în farfurie, ci și multă iubire pentru fiecare client.</p>
                     <p class="text-gray-600 mb-6">Avem două saloane primitoare – unul la parter și unul la etaj – perfecte pentru o masă în liniște, cu familia sau prietenii. Iar vara, terasa noastră e locul ideal să te bucuri de aer curat și liniște, ferit de soare, într-o atmosferă relaxată și plăcută.</p>
+                    <p class="text-gray-600 mb-6">Dispunem de suficient spațiu pentru ca fiecare oaspete să se simtă confortabil: 36 de locuri în salonul de la parter, 23 la etaj și 33 pe terasa aerisită, ideală pentru zilele senine. Indiferent dacă vii singur, în doi sau cu un grup mare, la Avalanche găsim mereu un loc potrivit pentru tine, ca să te bucuri în tihnă de fiecare masă.</p>
                     <p class="text-gray-600 mb-8">#gătimcapentrunoidarpentruvoi – nu e doar un hashtag, e felul nostru de a spune că fiecare preparat trece prin filtrul gusturilor noastre înainte să ajungă la voi. Gătim exact ca pentru noi, dar să vă bucurăm pe voi.</p>
                     
                     <div class="grid grid-cols-2 gap-4">
@@ -2028,7 +2033,7 @@
                 <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 Restaurant Avalanche Sinaia. Toate drepturile rezervate.</p>
     <!-- Informații legale și de contact -->
             <div class="mt-2 text-xs text-gray-500 space-y-1">
-                <p>SC Avalanche SRL | CUI: RO12345678 | Nr. Reg. Com: J29/123/2021</p>
+                <p>SC DOMALCO FOODS SRL | CUI: RO40522429 | Nr. Reg. Com: J29/567/2019</p>
                 <p>Strada Cuza Vodă 2B, Sinaia 106100, România</p>
                 <p>Tel: +40 744 359 059 | Email: office.avalancherestaurant@gmail.com</p>
             </div>
