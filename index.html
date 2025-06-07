@@ -148,42 +148,74 @@
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section id="galerie" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Galerie foto</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">O privire în spatele scenei la restaurantul nostru și preparatele noastre</p>
-                <div class="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
-            </div>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="gallery-image overflow-hidden rounded-lg shadow-lg">
-                    <img src="images/g1.jpeg" alt="Restaurant interior" class="w-full h-80 object-cover">
-                </div>
-                
-                <div class="gallery-image overflow-hidden rounded-lg shadow-lg">
-                    <img src="images/g2.jpeg" alt="Preparate culinare" class="w-full h-80 object-cover">
-                </div>
-                
-                <div class="gallery-image overflow-hidden rounded-lg shadow-lg">
-                    <img src="images/g3.jpeg" alt="Bucatarie" class="w-full h-80 object-cover">
-                </div>
-                
-                <div class="gallery-image overflow-hidden rounded-lg shadow-lg">
-                    <img src="images/g4.jpeg" alt="Preparat culinar" class="w-full h-80 object-cover">
-                </div>
-                
-                <div class="gallery-image overflow-hidden rounded-lg shadow-lg">
-                    <img src="images/g5.jpeg" alt="Preparat culinar" class="w-full h-80 object-cover">
-                </div>
-                
-                <div class="gallery-image overflow-hidden rounded-lg shadow-lg">
-                    <img src="images/g6.jpeg" alt="Vinuri" class="w-full h-80 object-cover">
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- Gallery Section -->
+<section id="galerie" class="py-20 bg-white">
+  <div class="px-4 md:px-8 lg:px-16">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Galerie foto</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">O privire în spatele scenei la restaurantul nostru și preparatele noastre</p>
+      <div class="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
+      <!-- Primele 6 imagini -->
+      <div class="gallery-image overflow-hidden rounded-lg shadow-lg">
+        <img src="images/g1.jpeg" alt="Restaurant interior" class="w-full h-80 object-cover">
+      </div>
+      <div class="gallery-image overflow-hidden rounded-lg shadow-lg">
+        <img src="images/g2.jpeg" alt="Preparate culinare" class="w-full h-80 object-cover">
+      </div>
+      <div class="gallery-image overflow-hidden rounded-lg shadow-lg">
+        <img src="images/g3.jpeg" alt="Bucatarie" class="w-full h-80 object-cover">
+      </div>
+      <div class="gallery-image overflow-hidden rounded-lg shadow-lg">
+        <img src="images/g4.jpeg" alt="Preparat culinar" class="w-full h-80 object-cover">
+      </div>
+      <div class="gallery-image overflow-hidden rounded-lg shadow-lg">
+        <img src="images/g5.jpeg" alt="Preparat culinar" class="w-full h-80 object-cover">
+      </div>
+      <div class="gallery-image overflow-hidden rounded-lg shadow-lg">
+        <img src="images/g6.jpeg" alt="Vinuri" class="w-full h-80 object-cover">
+      </div>
+
+      <!-- Următoarele 9 imagini ascunse inițial -->
+      <div class="gallery-image overflow-hidden rounded-lg shadow-lg hidden extra-gallery">
+        <img src="images/g7.jpeg" alt="Imagine suplimentară" class="w-full h-80 object-cover">
+      </div>
+      <div class="gallery-image overflow-hidden rounded-lg shadow-lg hidden extra-gallery">
+        <img src="images/g8.jpeg" alt="Imagine suplimentară" class="w-full h-80 object-cover">
+      </div>
+      <div class="gallery-image overflow-hidden rounded-lg shadow-lg hidden extra-gallery">
+        <img src="images/g9.jpeg" alt="Imagine suplimentară" class="w-full h-80 object-cover">
+      </div>
+      <div class="gallery-image overflow-hidden rounded-lg shadow-lg hidden extra-gallery">
+        <img src="images/g10.jpeg" alt="Imagine suplimentară" class="w-full h-80 object-cover">
+      </div>
+      <div class="gallery-image overflow-hidden rounded-lg shadow-lg hidden extra-gallery">
+        <img src="images/g11.jpeg" alt="Imagine suplimentară" class="w-full h-80 object-cover">
+      </div>
+      <div class="gallery-image overflow-hidden rounded-lg shadow-lg hidden extra-gallery">
+        <img src="images/g12.jpeg" alt="Imagine suplimentară" class="w-full h-80 object-cover">
+      </div>
+      <div class="gallery-image overflow-hidden rounded-lg shadow-lg hidden extra-gallery">
+        <img src="images/g13.jpeg" alt="Imagine suplimentară" class="w-full h-80 object-cover">
+      </div>
+      <div class="gallery-image overflow-hidden rounded-lg shadow-lg hidden extra-gallery">
+        <img src="images/g14.jpeg" alt="Imagine suplimentară" class="w-full h-80 object-cover">
+      </div>
+      <div class="gallery-image overflow-hidden rounded-lg shadow-lg hidden extra-gallery">
+        <img src="images/g15.jpeg" alt="Imagine suplimentară" class="w-full h-80 object-cover">
+      </div>
+    </div>
+
+    <!-- Buton Arată mai mult -->
+    <div class="text-center mt-10">
+      <button id="toggle-gallery-btn" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold transition">
+        Arată mai mult
+      </button>
+    </div>
+  </div>
+</section>
 
         <!-- Menu Section -->
     <section id="meniu" class="py-20 bg-gray-50">
@@ -1906,8 +1938,8 @@
                             <i class="fas fa-clock text-blue-600 text-xl mt-1 mr-4"></i>
                             <div>
                                 <h4 class="font-bold text-gray-800">Program</h4>
-                                <p class="text-gray-600">Luni - Vineri: 09:00 - 22:00</p>
-                                <p class="text-gray-600">Sâmbătă - Duminică: 09:00 - 22:00</p>
+                                <p class="text-gray-600">Luni - Joi: 10:00 - 22:00</p>
+                                <p class="text-gray-600">Vineri - Duminică: 09:00 - 22:00</p>
                             </div>
                         </div>
                     </div>
@@ -2011,9 +2043,8 @@
                 <div>
                     <h4 class="text-lg font-bold mb-4">Program</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li class="flex justify-between"><span>Luni - Vineri:</span> <span>09:00 - 22:00</span></li>
-                        <li class="flex justify-between"><span>Sâmbătă:</span> <span>09:00 - 22:00</span></li>
-                        <li class="flex justify-between"><span>Duminică:</span> <span>09:00 - 22:00</span></li>
+                        <li class="flex justify-between"><span>Luni - Joi:</span> <span>10:00 - 22:00</span></li>
+                        <li class="flex justify-between"><span>Vineri - Duminică:</span> <span>09:00 - 22:00</span></li>
                     </ul>
                 </div>
                 
@@ -2384,5 +2415,26 @@ function toggleZoom() {
     }
   }
 </style>
+
+<script>
+  const toggleBtn = document.getElementById('toggle-gallery-btn');
+  const extraImages = document.querySelectorAll('.extra-gallery');
+  const gallerySection = document.getElementById('galerie');
+
+  toggleBtn.addEventListener('click', () => {
+    const areHidden = extraImages[0].classList.contains('hidden');
+
+    extraImages.forEach(img => img.classList.toggle('hidden'));
+
+    if (areHidden) {
+      toggleBtn.textContent = 'Arată mai puțin';
+    } else {
+      toggleBtn.textContent = 'Arată mai mult';
+
+      // Scroll înapoi la începutul galeriei
+      gallerySection.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+</script>
 </body>
 </html>
