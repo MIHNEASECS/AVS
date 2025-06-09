@@ -1,0 +1,2461 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Restaurant Avalanche - Sinaia</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hero {
+            background-image: url('images/h1.jpeg');
+            background-size: 1970px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        .menu-item {
+            transition: all 0.3s ease;
+        }
+        
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gallery-image {
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-image:hover {
+            transform: scale(1.03);
+        }
+        
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        @media screen and (max-width: 768px) and (orientation: portrait) {
+        .hero {
+            background-image: url('images/hm1.jpeg');
+            background-size: 660px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="fixed w-full z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="images/logo.png" alt="Logo Avalanche" class="h-10 w-auto mr-2">
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#acasa" class="text-gray-700 hover:text-blue-600 transition">Acasă</a>
+                <a href="#despre" class="text-gray-700 hover:text-blue-600 transition">Despre noi</a>
+                <a href="#galerie" class="text-gray-700 hover:text-blue-600 transition">Galerie</a>
+                <a href="#meniu" class="text-gray-700 hover:text-blue-600 transition">Meniu</a>                
+                <a href="#contact" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
+            </nav>
+            
+            <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+                <a href="#acasa" class="text-gray-700 hover:text-blue-600 transition py-2">Acasă</a>
+                <a href="#despre" class="text-gray-700 hover:text-blue-600 transition py-2">Despre Noi</a>
+                <a href="#galerie" class="text-gray-700 hover:text-blue-600 transition py-2">Galerie</a>
+                <a href="#meniu" class="text-gray-700 hover:text-blue-600 transition py-2">Meniu</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-600 transition py-2">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+<section id="acasa" class="hero min-h-screen flex items-center justify-center text-white pt-20">
+    <div class="container mx-auto px-4 text-center">
+        <div class="inline-block bg-black bg-opacity-70 p-8 rounded-lg">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Bine ați venit la Avalanche</h1>
+            <p class="text-xl md:text-2xl mb-8">O experiență culinară de excepție în inima munților</p>
+            <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
+                <a href="#meniu" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold transition">Vezi Meniul</a>
+                <a href="#contact" class="bg-transparent border-2 border-white hover:bg-white hover:text-gray-900 text-white px-8 py-3 rounded-full font-semibold transition">Rezervă acum</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- About Section -->
+<section id="despre" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Despre restaurantul Avalanche</h2>
+            <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+        </div>  
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10 flex flex-col gap-4">
+                <img src="images/a1.jpeg" alt="Restaurant interior" class="rounded-lg shadow-xl w-full h-[550px] object-cover">
+                <img src="images/a2.jpeg" alt="Alt unghi restaurant" class="rounded-lg shadow-xl w-full h-[550px] object-cover">
+            </div>
+
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">O poveste de succes în Sinaia</h3>
+                    <p class="text-gray-600 mb-4">Avalanche – locul unde mâncarea bună aduce oameni împreună. Suntem un restaurant de familie deschis în 2021, din pasiunea noastră pentru mâncarea cu gust, făcută cu suflet. Meniul e plin de preparatele noastre preferate – exact ce ne place și nouă să mâncăm acasă. La Avalanche găsești un loc cozy, unde vrem ca fiecare om care ne trece pragul să se simtă bine, să mănânce pe săturate și să plece mulțumit, cu zâmbetul pe buze. Aici, punem nu doar gust în farfurie, ci și multă iubire pentru fiecare client.</p>
+                    <p class="text-gray-600 mb-6">Avem două saloane primitoare – unul la parter și unul la etaj – perfecte pentru o masă în liniște, cu familia sau prietenii. Iar vara, terasa noastră e locul ideal să te bucuri de aer curat și liniște, ferit de soare, într-o atmosferă relaxată și plăcută.</p>
+                    <p class="text-gray-600 mb-6">Dispunem de suficient spațiu pentru ca fiecare oaspete să se simtă confortabil: 36 de locuri în salonul de la parter, 23 la etaj și 33 pe terasa aerisită, ideală pentru zilele senine. Indiferent dacă vii singur, în doi sau cu un grup mare, la Avalanche găsim mereu un loc potrivit pentru tine, ca să te bucuri în tihnă de fiecare masă.</p>
+                    <p class="text-gray-600 mb-8">#gătimcapentrunoidarpentruvoi – nu e doar un hashtag, e felul nostru de a spune că fiecare preparat trece prin filtrul gusturilor noastre înainte să ajungă la voi. Gătim exact ca pentru noi, dar să vă bucurăm pe voi.</p>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-utensils text-blue-600 text-xl mr-3"></i>
+                            <span class="text-gray-700">Bucătărie autentică</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-wine-glass-alt text-blue-600 text-xl mr-3"></i>
+                            <span class="text-gray-700">Selecție de vinuri</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-door-open text-blue-600 text-xl mr-3"></i>
+                            <span class="text-gray-700">Accees terasă</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-cocktail text-blue-600 text-xl mr-3"></i>
+                            <span class="text-gray-700">Cocktailuri</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Gallery Section -->
+<section id="galerie" class="py-20 bg-white">
+  <div class="px-4 md:px-8 lg:px-16">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Galerie foto</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">O privire în spatele scenei la restaurantul nostru și preparatele noastre</p>
+      <div class="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
+      <!-- Primele 6 imagini -->
+      <div class="gallery-image overflow-hidden rounded-lg shadow-lg">
+        <img src="images/g1.jpeg" alt="Restaurant interior" class="w-full h-80 object-cover">
+      </div>
+      <div class="gallery-image overflow-hidden rounded-lg shadow-lg">
+        <img src="images/g2.jpeg" alt="Preparate culinare" class="w-full h-80 object-cover">
+      </div>
+      <div class="gallery-image overflow-hidden rounded-lg shadow-lg">
+        <img src="images/g3.jpeg" alt="Bucatarie" class="w-full h-80 object-cover">
+      </div>
+      <div class="gallery-image overflow-hidden rounded-lg shadow-lg">
+        <img src="images/g4.jpeg" alt="Preparat culinar" class="w-full h-80 object-cover">
+      </div>
+      <div class="gallery-image overflow-hidden rounded-lg shadow-lg">
+        <img src="images/g5.jpeg" alt="Preparat culinar" class="w-full h-80 object-cover">
+      </div>
+      <div class="gallery-image overflow-hidden rounded-lg shadow-lg">
+        <img src="images/g6.jpeg" alt="Vinuri" class="w-full h-80 object-cover">
+      </div>
+
+      <!-- Următoarele 9 imagini ascunse inițial -->
+      <div class="gallery-image overflow-hidden rounded-lg shadow-lg hidden extra-gallery">
+        <img src="images/g7.jpeg" alt="Imagine suplimentară" class="w-full h-80 object-cover">
+      </div>
+      <div class="gallery-image overflow-hidden rounded-lg shadow-lg hidden extra-gallery">
+        <img src="images/g8.jpeg" alt="Imagine suplimentară" class="w-full h-80 object-cover">
+      </div>
+      <div class="gallery-image overflow-hidden rounded-lg shadow-lg hidden extra-gallery">
+        <img src="images/g9.jpeg" alt="Imagine suplimentară" class="w-full h-80 object-cover">
+      </div>
+      <div class="gallery-image overflow-hidden rounded-lg shadow-lg hidden extra-gallery">
+        <img src="images/g10.jpeg" alt="Imagine suplimentară" class="w-full h-80 object-cover">
+      </div>
+      <div class="gallery-image overflow-hidden rounded-lg shadow-lg hidden extra-gallery">
+        <img src="images/g11.jpeg" alt="Imagine suplimentară" class="w-full h-80 object-cover">
+      </div>
+      <div class="gallery-image overflow-hidden rounded-lg shadow-lg hidden extra-gallery">
+        <img src="images/g12.jpeg" alt="Imagine suplimentară" class="w-full h-80 object-cover">
+      </div>
+      <div class="gallery-image overflow-hidden rounded-lg shadow-lg hidden extra-gallery">
+        <img src="images/g13.jpeg" alt="Imagine suplimentară" class="w-full h-80 object-cover">
+      </div>
+      <div class="gallery-image overflow-hidden rounded-lg shadow-lg hidden extra-gallery">
+        <img src="images/g14.jpeg" alt="Imagine suplimentară" class="w-full h-80 object-cover">
+      </div>
+      <div class="gallery-image overflow-hidden rounded-lg shadow-lg hidden extra-gallery">
+        <img src="images/g15.jpeg" alt="Imagine suplimentară" class="w-full h-80 object-cover">
+      </div>
+    </div>
+
+    <!-- Buton Arată mai mult -->
+    <div class="text-center mt-10">
+      <button id="toggle-gallery-btn" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold transition">
+        Arată mai mult
+      </button>
+    </div>
+  </div>
+</section>
+
+        <!-- Menu Section -->
+    <section id="meniu" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Meniul nostru</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Descoperiți o selecție atent gândită de preparate care să vă încante simțurile</p>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="flex flex-wrap mb-12 justify-center">
+                <button class="menu-category-btn active px-6 py-2 mx-2 mb-2 bg-blue-600 text-white rounded-full" data-category="gustari">Gustari & mic-dejun / Starters & breakfast</button>
+                <button class="menu-category-btn px-6 py-2 mx-2 mb-2 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-full" data-category="supe">Supe, ciorbe / Soups</button>
+                <button class="menu-category-btn px-6 py-2 mx-2 mb-2 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-full" data-category="speciale">Specialitatile Avalanche / Avalanche specialities</button>
+                <button class="menu-category-btn px-6 py-2 mx-2 mb-2 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-full" data-category="gratar">Preparate la gratar / Grilled meat</button>
+                <button class="menu-category-btn px-6 py-2 mx-2 mb-2 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-full" data-category="pizza">Pizza</button>
+                <button class="menu-category-btn px-6 py-2 mx-2 mb-2 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-full" data-category="paste">Paste / Pasta</button>
+                <button class="menu-category-btn px-6 py-2 mx-2 mb-2 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-full" data-category="garnituri">Garnituri / Side dishes</button>
+                <button class="menu-category-btn px-6 py-2 mx-2 mb-2 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-full" data-category="salate">Salate de insotire / Salads</button>
+                <button class="menu-category-btn px-6 py-2 mx-2 mb-2 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-full" data-category="desert">Desert / Dessert</button>
+                <button class="menu-category-btn px-6 py-2 mx-2 mb-2 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-full" data-category="diverse">Diverse / Other</button>
+                <button class="menu-category-btn px-6 py-2 mx-2 mb-2 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-full" data-category="bcalde">Bauturi calde / Hot drinks</button>
+                <button class="menu-category-btn px-6 py-2 mx-2 mb-2 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-full" data-category="fresh">Sucuri proaspete si limonada / Fresh juice and lemonade</button>
+                <button class="menu-category-btn px-6 py-2 mx-2 mb-2 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-full" data-category="soft">Bauturi racoritoare / Soft drinks</button>
+                <button class="menu-category-btn px-6 py-2 mx-2 mb-2 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-full" data-category="cocktail">Cocktail-uri / Cocktails</button>
+                <button class="menu-category-btn px-6 py-2 mx-2 mb-2 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-full" data-category="starter">Aperitive / Starters</button>
+                <button class="menu-category-btn px-6 py-2 mx-2 mb-2 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-full" data-category="btraditionale">Bauturi traditionale / Traditional drinks</button>
+                <button class="menu-category-btn px-6 py-2 mx-2 mb-2 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-full" data-category="gtvr">Gin, tequila, vodka, rum</button>
+                <button class="menu-category-btn px-6 py-2 mx-2 mb-2 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-full" data-category="whiskey">Whiskey</button>
+                <button class="menu-category-btn px-6 py-2 mx-2 mb-2 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-full" data-category="bere">Bere / Beer</button>
+                <button class="menu-category-btn px-6 py-2 mx-2 mb-2 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-full" data-category="vin">Vin / Wine</button>
+            </div>
+
+    <div class="w-full flex justify-center gap-6 mt-6 mb-24">
+    <button onclick="openModal('images/alergeni.jpg')" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold shadow transition">Alergeni</button>
+    <a href="docs/valori-nutritionale.pdf" target="_blank" class="bg-gray-700 hover:bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold shadow transition">
+        Valori nutriționale
+    </a>
+</div>
+            
+            <!-- GUSTARI & MIC DEJUN / STARTERS & BREAKFAST -->
+            <div id="gustari" class="menu-category grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Salată Caesar</h3>
+                        <span class="text-blue-600 font-bold">43 RON</span>
+                    </div>
+                    <p class="text-gray-600">Piept de pui, salată verde, pâine prăjită, dressing, parmezan / chicken breast, salad, toasted bread, caesar dressing, parmesan. 350g.</p>
+                </div>
+                
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Salată Bulgărească</h3>
+                        <span class="text-blue-600 font-bold">39 RON</span>
+                    </div>
+                    <p class="text-gray-600">Rosii, castraveti, ceapă rosie, ardei gras, măsline, brânză feta, ou fiert, suncă / tomatoes, cucumber, red onion, peppers, olives, feta cheese, egg, ham. 450g.</p>
+                </div>
+                
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Salată Grecească</h3>
+                        <span class="text-blue-600 font-bold">35 RON</span>
+                    </div>
+                    <p class="text-gray-600">Roșii, castraveti, ceapă rosie, ardei gras, măsline, branză feta / tomatoes, cucumber, red onion, peppers, olives, feta cheese. 450g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Salată Italiană</h3>
+                        <span class="text-blue-600 font-bold">39 RON</span>
+                    </div>
+                    <p class="text-gray-600">Salată verde, rucola, roșii cherry, prosciutto crudo, parmezan / green salad, arugola, cherry tomatoes, prosciutto crudo, parmesan. 300g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Salată cu ton și porumb</h3>
+                        <span class="text-blue-600 font-bold">39 RON</span>
+                    </div>
+                    <p class="text-gray-600">Salată verde, ton , porumb dulce, ceapă roșie / salad, tunna, sweet corn , red onion. 350g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Creveti Saganaki</h3>
+                        <span class="text-blue-600 font-bold">49 RON</span>
+                    </div>
+                    <p class="text-gray-600">Sos de roșii, creveti, brânză feta, ulei de masline, usturoi, busuioc / tomato sauce, shrimps, feta cheese, olive oil, garlic, basil. 300g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Platou mic-dejun</h3>
+                        <span class="text-blue-600 font-bold">44 RON</span>
+                    </div>
+                    <p class="text-gray-600">Salam, suncă de praga, caşcaval, brânză telemea, măsline, roșii / salami, ham, cheese, olive tomatoes. 300g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Omletă cu șuncă & cașcaval</h3>
+                        <span class="text-blue-600 font-bold">27 RON</span>
+                    </div>
+                    <p class="text-gray-600">120g ouă, cașcaval & șuncă/ 120g eggs, ham & cheese. 200g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Omletă țărănească</h3>
+                        <span class="text-blue-600 font-bold">30 RON</span>
+                    </div>
+                    <p class="text-gray-600">120g ouă, şuncă, caşcaval, roșii, ardei gras, ceapă / 120g eggs, ham, cheese, tomatoes, red peppers, onion. 300g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Ouă ochiuri cu bacon</h3>
+                        <span class="text-blue-600 font-bold">22 RON</span>
+                    </div>
+                    <p class="text-gray-600">2 ouă, bacon / 2 eggs, bacon. 200g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Caşcaval pane</h3>
+                        <span class="text-blue-600 font-bold">32 RON</span>
+                    </div>
+                    <p class="text-gray-600">Cașcaval, pesmet, ou / cheese, crumbled bread, egg. 150g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Mămăliguţă cu brânză și smântână</h3>
+                        <span class="text-blue-600 font-bold">28 RON</span>
+                    </div>
+                    <p class="text-gray-600">Mămăligă, brânză telemea, smântană / polenta, cheese, cream. 300g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Bulz haiducesc</h3>
+                        <span class="text-blue-600 font-bold">35 RON</span>
+                    </div>
+                    <p class="text-gray-600">Brânză de burduf, cârnați, kaizer, mămăligă / local cheese, sausages, pork bacon, polenta. 300g.</p>
+                </div>
+            </div>
+
+            <!-- Supe, ciorbe / Soups -->
+            <div id="supe" class="menu-category hidden grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Ciorbă de fasole în bol de pâine</h3>
+                        <span class="text-blue-600 font-bold">35 RON</span>
+                    </div>
+                    <p class="text-gray-600">Fasole, morcov, ceapă, ardei gras, rosii, telină, verdeată, afumătură, pâine / beans, carrot, onion, green pepper, tomatoes, celery, smoked meat, parsley, bread bowl. 350/50/200g.</p>
+                </div>
+                
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Ciorbă de fasole cu afumătură</h3>
+                        <span class="text-blue-600 font-bold">27 RON</span>
+                    </div>
+                    <p class="text-gray-600">Fasole, morcov, ceapă, ardei gras, rosii, telină, verdeaţă, afumtură / beans, carrots, onion, green pepper, tomatoes, celery, smoked meat, parsley. 350/50g.</p>
+                </div>
+                
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Ciorbă de burtă</h3>
+                        <span class="text-blue-600 font-bold">27 RON</span>
+                    </div>
+                    <p class="text-gray-600">Burtă de vită, smântănă, ou, otet, usturoi / tripe meat, cream, egg, vinegar, garlic. 300/100g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Ciorbă de văcuţă</h3>
+                        <span class="text-blue-600 font-bold">27 RON</span>
+                    </div>
+                    <p class="text-gray-600">Carne de vită, cartofi, păstârnac, morcov, ceapă, ardei gras, fasole verde, roșii, telină, verdeaţă / beef meat, potatoes, parsnip, carrots, onion, green pepper, green beans tomatoes, celery, parsley. 340/60g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Ciorbă de legume</h3>
+                        <span class="text-blue-600 font-bold">20 RON</span>
+                    </div>
+                    <p class="text-gray-600">Cartofi, păstârnac, morcov, ceapă, ardei gras, fasole verde, roșii, telină, verdeată / potatoes, parsnip, carrots, onion, green pepper, green beans tomatoes, celery, parsley. 400g.</p>
+                </div>
+            </div>
+            
+            <!-- Specialitati Avalanche / Avalanche specialities (hidden by default) -->
+            <div id="speciale" class="menu-category hidden grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Snitel gratinat la cuptor cu mozzarella</h3>
+                        <span class="text-blue-600 font-bold">45 RON</span>
+                    </div>
+                    <p class="text-gray-600">Piept de pui, pesmet, ou, mozzarella, sos de roșii / chicken breast, bread crumbles, egg, mozzarella, tomatoes sauce, spices. 250g.</p>
+                </div>
+                
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Snitel crispy din piept de pui</h3>
+                        <span class="text-blue-600 font-bold">37 RON</span>
+                    </div>
+                    <p class="text-gray-600">Piept de pui, pesmet, ou, condimente / chicken breast, bread crumbles, egg, spices. 200g.</p>
+                </div>
+                
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Piept de pui cu sos gorgonzola</h3>
+                        <span class="text-blue-600 font-bold">43 RON</span>
+                    </div>
+                    <p class="text-gray-600">Piept de pui, smântână de gătit, gorgonzola / chicken breast, cream, gorgonzola, spices. 170/80g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Chicken Burger</h3>
+                        <span class="text-blue-600 font-bold">49 RON</span>
+                    </div>
+                    <p class="text-gray-600">Chiflă, snitel de pui, salată iceberg, sos remoulade, cartofi prăjiți / bread bun, chicken schnitzel, remoulade sauce, fried potatoes. 400g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Tomahawk de porc cu piure de cartofi</h3>
+                        <span class="text-blue-600 font-bold">59 RON</span>
+                    </div>
+                    <p class="text-gray-600">Tomahawk de porc la gratar, cartofi / Grilled pork tomahawk with smashed potatoes. 450g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Coaste de porc marinate cu cartofi</h3>
+                        <span class="text-blue-600 font-bold">85 RON</span>
+                    </div>
+                    <p class="text-gray-600">Coaste de porc marinate la cuptor, cartofi prajiti / marinated pork ribs with fries. 800g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Ciolan de porc cu cartofi si hrean</h3>
+                        <span class="text-blue-600 font-bold">75 RON</span>
+                    </div>
+                    <p class="text-gray-600">Ciolan de porc la cuptor, cartofi prăjiți, hrean / pork knuckle, fries, horseradish sauce. 200g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Carne la garnită cu mămăligă si mujdei</h3>
+                        <span class="text-blue-600 font-bold">61 RON</span>
+                    </div>
+                    <p class="text-gray-600">Carne la garnită, mămăligă, mujdei / pork meat in lard, polenta, garlic sauce. 350g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Sarmale cu mămăligă</h3>
+                        <span class="text-blue-600 font-bold">45 RON</span>
+                    </div>
+                    <p class="text-gray-600">Sarmale, mămăligă / pork cabbage rolls, polenta. 400g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Escalop de porc cu ciuperci</h3>
+                        <span class="text-blue-600 font-bold">45 RON</span>
+                    </div>
+                    <p class="text-gray-600">Escalop de porc, ciuperci / pork escalope, mushrooms. 250g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Cordon Bleu</h3>
+                        <span class="text-blue-600 font-bold">46 RON</span>
+                    </div>
+                    <p class="text-gray-600">Carne de porc, șuncă de porc, cagcaval, pesmet, ou / pork meat, ham, cheese, bread crumbs, egg. 200g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Pffefersteak de vită</h3>
+                        <span class="text-blue-600 font-bold">105 RON</span>
+                    </div>
+                    <p class="text-gray-600">Antricot de vita maturat, sos de piper / beef sirloin, pepper sauce. 250g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Burger Avalanche</h3>
+                        <span class="text-blue-600 font-bold">63 RON</span>
+                    </div>
+                    <p class="text-gray-600">Chiflă, carne de vită maturată 30 de zile, cheddar, dulceaţă de ceapă, roșie, castraveti murati, salată verde, ketchup, sos de burger, sos barbeque, cartofi prăjiți / bread, beef burger aged 30 days, cheddar, onion jam, tomatoes, pickles, salad, ketchup, burger sauce, barbeque sauce, fried potatoes. 450g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Cotlete de berbec, mămăligă si mujdei</h3>
+                        <span class="text-blue-600 font-bold">85 RON</span>
+                    </div>
+                    <p class="text-gray-600">Cotlete de berbecut, mămăligă, mujdei / mutton chops, polenta, garlic sauce. 430g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">File de șalău cu sos Meuniere</h3>
+                        <span class="text-blue-600 font-bold">58 RON</span>
+                    </div>
+                    <p class="text-gray-600">File de șalău, sos Meuniere / zander fillets, Meuniere sauce. 250g.</p>
+                </div>
+            </div>
+            
+            <!-- Preparate la gratar / Grilled meat (hidden by default) -->
+            <div id="gratar" class="menu-category hidden grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Piept de pui la gratar</h3>
+                        <span class="text-blue-600 font-bold">33 RON</span>
+                    </div>
+                    <p class="text-gray-600">Piept de pui, condimente / chicken breast, spices. 180g.</p>
+                </div>
+                
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Pulpe de pui dezosate la gratar</h3>
+                        <span class="text-blue-600 font-bold">33 RON</span>
+                    </div>
+                    <p class="text-gray-600">Pulpă de pui, condimente / chicken leg, spices. 200g.</p>
+                </div>
+                
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Ceafă de porc la grătar</h3>
+                        <span class="text-blue-600 font-bold">35 RON</span>
+                    </div>
+                    <p class="text-gray-600">Ceafă de porc, condimente / pork neck, spices. 200g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Platou de cărnuri la grătar</h3>
+                        <span class="text-blue-600 font-bold">115 RON</span>
+                    </div>
+                    <p class="text-gray-600">Ceafă de porc, pulpe de pui, mici, cârnați de porc, cartofi prajiti, castraveti murati / pork neck, chicken thighs, romanian meatballs, pork sausages, french fries, pickled cucumbers. 1000g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Mușchi de vită la grătar</h3>
+                        <span class="text-blue-600 font-bold">95 RON</span>
+                    </div>
+                    <p class="text-gray-600">Mușchi de vită / beef tenderloin. 180g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Mici cu mustar</h3>
+                        <span class="text-blue-600 font-bold">34 RON</span>
+                    </div>
+                    <p class="text-gray-600">Mici, mustar, 4 buc. / romanian meatballs, mustard 4 pcs. 280g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">T-bone steak maturat</h3>
+                        <span class="text-blue-600 font-bold">190 RON</span>
+                    </div>
+                    <p class="text-gray-600">Steak de vită maturat 30 de zile, potrivit pentru 2-3 persoane / beef stake aged for 30 days, suited for 2-3 people. 700g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Rib-eye steak maturat</h3>
+                        <span class="text-blue-600 font-bold">105 RON</span>
+                    </div>
+                    <p class="text-gray-600">Rib-eye steak maturat 30 de zile / 30 days aged rib-eye steak. 220g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Păstrăv la grătar</h3>
+                        <span class="text-blue-600 font-bold">49 RON</span>
+                    </div>
+                    <p class="text-gray-600">Păstrăv la grătar / grilled trout. 300g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Somon la grătar</h3>
+                        <span class="text-blue-600 font-bold">55 RON</span>
+                    </div>
+                    <p class="text-gray-600">Somon la grătar / grilled salmon. 180g.</p>
+                </div>
+            </div>
+            
+            <!-- Pizza (hidden by default) -->
+            <div id="pizza" class="menu-category hidden grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Pizza Avalanche</h3>
+                        <span class="text-blue-600 font-bold">45 RON</span>
+                    </div>
+                    <p class="text-gray-600">Aluat pizza, sos de roșii, mozzarella, gorgonzola, prosciutto crudo, rucola / pizza dough, tomatoes sauce, mozzarella, gorgonzola, prosciutto crudo, aragula. 500g.</p>
+                </div>
+                
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Pizza con frutti di mare</h3>
+                        <span class="text-blue-600 font-bold">51 RON</span>
+                    </div>
+                    <p class="text-gray-600">Aluat de pizza, sos de roșii, mozzarela, mix de fructe de mare, creveti, ustuoi, patrunjel / pizza dough, tomatoes sauce, mozzarela, seafood mix, shrimp, garlic, parsley. 500g.</p>
+                </div>
+                
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Pizza Margherita</h3>
+                        <span class="text-blue-600 font-bold">37 RON</span>
+                    </div>
+                    <p class="text-gray-600">Aluat de pizza, sos de rosii, mozzarella, busuioc / pizza dough, tomatoes sauce, mozzarella, basil. 450g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Pizza Pollo</h3>
+                        <span class="text-blue-600 font-bold">45 RON</span>
+                    </div>
+                    <p class="text-gray-600">Aluat de pizza, sos de rosii, mozzarella, pui, bacon, ardei gras, porumb / pizza dough tomatoes sauce, mozzarella, chicken meat, bacon, peppers, sweet corn. 500g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Pizza Quattro Staggioni</h3>
+                        <span class="text-blue-600 font-bold">42 RON</span>
+                    </div>
+                    <p class="text-gray-600">Aluat pizza, sos de rosii, mozzarella, ardei gras, ciuperci, măsline, suncă / pizza dough, tomatoes sauce, mozzarella, mushrooms, olives, ham. 500g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Pizza Quatro Formaggi</h3>
+                        <span class="text-blue-600 font-bold">45 RON</span>
+                    </div>
+                    <p class="text-gray-600">Aluat de pizza, mozzarella, parmezan, gorgonzola, cheddar / pizza dough, mozzarella, parmesan, gorgonzolla, cheddar. 500g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Pizza prosciutto e funghi </h3>
+                        <span class="text-blue-600 font-bold">42 RON</span>
+                    </div>
+                    <p class="text-gray-600">Aluat de pizza ,sos de roșii, mozzarella, suncă, ciuperci / pizza dough, tomatoes sauce, mozzarella, ham, mushrooms. 500g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Pizza Salami</h3>
+                        <span class="text-blue-600 font-bold">44 RON</span>
+                    </div>
+                    <p class="text-gray-600">Aluat de pizza, sos de roșii, mozzarella, salam / pizza dought tomatoes sauce, mozzarella, salami. 500g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Pizza Carnivora</h3>
+                        <span class="text-blue-600 font-bold">44 RON</span>
+                    </div>
+                    <p class="text-gray-600">Aluat de pizza, sos de roșii, mozzarella, șuncă, bacon, salam , ardei gras / pizza dough, tomatoes sauce, mozzarella, ham, bacon, salami, peppers. 500g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Pizza Capriciosa</h3>
+                        <span class="text-blue-600 font-bold">42 RON</span>
+                    </div>
+                    <p class="text-gray-600">Aluat de pizza, sos de rosii, mozzarella, ciuperci, măsline, șuncă / pizza dough, tomatoes sauce, mozzarella, mushrooms, olives, ham. 500g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Pizza con prosciutto crudo</h3>
+                        <span class="text-blue-600 font-bold">45 RON</span>
+                    </div>
+                    <p class="text-gray-600">Aluat de pizza, sos de roșii, mozzarella, prosciutto crudo, rucola, roșii, parmezan / pizza dough, tomatoes sauce, mozzarella, prosciutto crudo, aragula, tomatoes, parmesan. 450g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Pizza con tonno</h3>
+                        <span class="text-blue-600 font-bold">42 RON</span>
+                    </div>
+                    <p class="text-gray-600">Aluat de pizza, sos de roșii, mozzarella, ton, capere, ceapă rosie / pizza dough, tomatoes sauce, mozzarella, tunna, capers, red onion. 500g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Pizza Vegetale</h3>
+                        <span class="text-blue-600 font-bold">42 RON</span>
+                    </div>
+                    <p class="text-gray-600">Aluat de pizza, sos de rosii, tofu, ciuperci, măsline, ardei gras / pizza dough, tomatoes sauce, tofu cheese, mushrooms, olive, peppers. 500g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Focaccia cu parmesan</h3>
+                        <span class="text-blue-600 font-bold">19 RON</span>
+                    </div>
+                    <p class="text-gray-600">Aluat de pizza, ulei de măsline, parmezan, oregano / pizza dough, olive oil, parmesan, oregano. 300g.</p>
+                </div>
+            </div>
+        </div>
+
+    <!-- Paste / Pasta (hidden by default) -->
+            <div class="container mx-auto px-4">
+             <div id="paste" class="menu-category hidden grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Penne siciliene al forno </h3>
+                        <span class="text-blue-600 font-bold">48 RON</span>
+                    </div>
+                    <p class="text-gray-600">Penne, sos de roșii, smântână de gătit, șuncă, mozzarella, parmezan, ceapă, usturoi / pasta, tomatoes sauce, cream, ham, mozzarella, parmesan, onion, garlic. 400g.</p>
+                </div>
+                
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Penne a la carbonara</h3>
+                        <span class="text-blue-600 font-bold">43 RON</span>
+                    </div>
+                    <p class="text-gray-600">Penne, smântână de gătit, ou, bacon, pecorino, parmezan, usturoi/ pasta, cream, egg, bacon, pecorino ,parmesan, garlic. 400g.</p>
+                </div>
+                
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Penne Quatro Formaggi</h3>
+                        <span class="text-blue-600 font-bold">43 RON</span>
+                    </div>
+                    <p class="text-gray-600">Penne, smânână de gătit, mozzarela, gorgonzola, parmezan, cedar, pecorino / pasta, cream, mozzarella, gorgonzola, parmesan, cedar, pecorino. 400g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Spaghetti con frutti di mare</h3>
+                        <span class="text-blue-600 font-bold">58 RON</span>
+                    </div>
+                    <p class="text-gray-600">Spaghete, sos de roșii, mix fructe de mare, creveti, usturoi, pătrunjel, parmezan / spaghetti, tomatoes sace, seafood mix, shrimps, garlic, parsley, parmesan. 400g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Spaghetti Primavera</h3>
+                        <span class="text-blue-600 font-bold">43 RON</span>
+                    </div>
+                    <p class="text-gray-600">Spaghete, sos de roșii, morcov, ardei, telina, pătrunjel / spaghetti, tomatoes sauce, carrots, celery, parsley. 400g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Spaghetti Al'Arrabbiatta</h3>
+                        <span class="text-blue-600 font-bold">37 RON</span>
+                    </div>
+                    <p class="text-gray-600">Spaghete, sos de roșii, ardei iute, usturoi, pătrunjel / spaghetti, tomatoes sauce, chilli pepper, garlic, parsley. 400g.</p>
+                </div>
+            </div>
+        </div>
+
+    <!-- Garnituri / Side dishes (hidden by default) -->
+            <div class="container mx-auto px-4">
+             <div id="garnituri" class="menu-category hidden grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Cartofi prăjiți cu brânză rasă</h3>
+                        <span class="text-blue-600 font-bold">20 RON</span>
+                    </div>
+                    <p class="text-gray-600">Cartofi prăjiți, brânză / Fried potatoes, cheese. 180g.</p>
+                </div>
+                
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Cartofi noi la cuptor</h3>
+                        <span class="text-blue-600 font-bold">22 RON</span>
+                    </div>
+                    <p class="text-gray-600">Cartofi noi / new potatoes. 200g.</p>
+                </div>
+                
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Piure de cartofi</h3>
+                        <span class="text-blue-600 font-bold">18 RON</span>
+                    </div>
+                    <p class="text-gray-600">Piure de cartofi / smashed potatoes with butter. 200g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Orez sârbesc</h3>
+                        <span class="text-blue-600 font-bold">18 RON</span>
+                    </div>
+                    <p class="text-gray-600">Orez, ceapă, ardei gras, morcov / rice, onion, peppers, carrot. 200g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Legume asortate sote</h3>
+                        <span class="text-blue-600 font-bold">18 RON</span>
+                    </div>
+                    <p class="text-gray-600">Morcov, brocoli, conopidă / carrots, broccolli, cauliflower. 200g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Legume asortate la grătar</h3>
+                        <span class="text-blue-600 font-bold">18 RON</span>
+                    </div>
+                    <p class="text-gray-600">Ciuperdi, dovlecel, ardei capia, vanătă / mushrooms, zucchini, red pepper, eggplant. 150g.</p>
+                </div>
+            </div>
+        </div> 
+
+        <!-- Salate de insotire / Salads (hidden by default) -->
+            <div class="container mx-auto px-4">
+             <div id="salate" class="menu-category hidden grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Salată asortată de vară</h3>
+                        <span class="text-blue-600 font-bold">15 RON</span>
+                    </div>
+                    <p class="text-gray-600">Roșii, castraveti, ceapă, ardei gms / tomatoes, cucumber, peppers, onion. 200g.</p>
+                </div>
+                
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Salată de roșii cu telemea</h3>
+                        <span class="text-blue-600 font-bold">15 RON</span>
+                    </div>
+                    <p class="text-gray-600">Roșii, brânză telemea / tomatoes, cheese. 200g.</p>
+                </div>
+                
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Salată de varză albă</h3>
+                        <span class="text-blue-600 font-bold">12 RON</span>
+                    </div>
+                    <p class="text-gray-600">Varză albă / cabbage. 150g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Salată de sfeclă roșie</h3>
+                        <span class="text-blue-600 font-bold">12 RON</span>
+                    </div>
+                    <p class="text-gray-600">Sfeclă roșie murata / pickled beetroot. 150g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Salată de ardei copti cu usturoi</h3>
+                        <span class="text-blue-600 font-bold">15 RON</span>
+                    </div>
+                    <p class="text-gray-600">Ardei copti, usturoi / peppers, garlic. 150g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Salată de castraveti murati</h3>
+                        <span class="text-blue-600 font-bold">15 RON</span>
+                    </div>
+                    <p class="text-gray-600">Castraveti murati / pickled cucumbers. 150g.</p>
+                </div>
+            </div>
+        </div> 
+
+        <!-- Desert / Dessert (hidden by default) -->
+            <div class="container mx-auto px-4">
+             <div id="desert" class="menu-category hidden grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Papanas cu smântână și dulceață</h3>
+                        <span class="text-blue-600 font-bold">29 RON</span>
+                    </div>
+                    <p class="text-gray-600">Brânză proaspătă de vaci, ou, făină, zahăr, lămâie, smântână, dulceata de fructe / cottage cheese, egg, flour, cream, fruit jam. 250g.</p>
+                </div>
+                
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Clătite cu ciocolată/dulceață</h3>
+                        <span class="text-blue-600 font-bold">27 RON</span>
+                    </div>
+                    <p class="text-gray-600">Lapte, ou, făină, apă minerală / milk, egg, flour, sparkling water. 200g.</p>
+                </div>
+                
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Lava cake servită cu inghetată</h3>
+                        <span class="text-blue-600 font-bold">30 RON</span>
+                    </div>
+                    <p class="text-gray-600">Lava cake, ighetată / lava cake, ice cream. 200g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Créme Brûlée</h3>
+                        <span class="text-blue-600 font-bold">25 RON</span>
+                    </div>
+                    <p class="text-gray-600">Smântână, frișcă, ouă, zahăr / cream, whipped cream, eggs, sugar. 150g.</p>
+                </div>
+            </div>
+        </div> 
+
+                <!-- Diverse / Other (hidden by default) -->
+            <div class="container mx-auto px-4">
+             <div id="diverse" class="menu-category hidden grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Smântână</h3>
+                        <span class="text-blue-600 font-bold">5 RON</span>
+                    </div>
+                    <p class="text-gray-600">Cream. 50g.</p>
+                </div>
+                
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Parmezan</h3>
+                        <span class="text-blue-600 font-bold">10 RON</span>
+                    </div>
+                    <p class="text-gray-600">Parmesan. 30g.</p>
+                </div>
+                
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Brânză telemea</h3>
+                        <span class="text-blue-600 font-bold">6 RON</span>
+                    </div>
+                    <p class="text-gray-600">Romanian cheese. 50g.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Sos de roșii</h3>
+                        <span class="text-blue-600 font-bold">4 RON</span>
+                    </div>
+                    <p class="text-gray-600">Tomatoes sauce. 30g.</p>
+                </div>
+
+                                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Coș de pâine</h3>
+                        <span class="text-blue-600 font-bold">5 RON</span>
+                    </div>
+                    <p class="text-gray-600">Bread basket. 150g.</p>
+                </div>
+                                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Mămăligă</h3>
+                        <span class="text-blue-600 font-bold">6 RON</span>
+                    </div>
+                    <p class="text-gray-600">Polenta. 200g.</p>
+                </div>
+                                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Sos de usturoi</h3>
+                        <span class="text-blue-600 font-bold">5 RON</span>
+                    </div>
+                    <p class="text-gray-600">Garlic sauce. 30g.</p>
+                </div>
+                                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Ardei iute</h3>
+                        <span class="text-blue-600 font-bold">2 RON</span>
+                    </div>
+                    <p class="text-gray-600">Hot pepper. 1 buc. / 1 pc.</p>
+                </div>
+                                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Sos de maioneză/ketchup</h3>
+                        <span class="text-blue-600 font-bold">5 RON</span>
+                    </div>
+                    <p class="text-gray-600">Mayo sauce/ketchup. 30g.</p>
+                </div>
+                                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Sos de hrean</h3>
+                        <span class="text-blue-600 font-bold">6 RON</span>
+                    </div>
+                    <p class="text-gray-600">Horseradish sauce. 30g.</p>
+                </div>
+            </div>
+        </div> 
+
+                <!-- Bauturi calde / Hot drinks (hidden by default) -->
+            <div class="container mx-auto px-4">
+             <div id="bcalde" class="menu-category hidden grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Espresso</h3>
+                        <span class="text-blue-600 font-bold">12 RON</span>
+                    </div>
+                    <p class="text-gray-600">35ml.</p>
+                </div>
+                
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Espresso dublu</h3>
+                        <span class="text-blue-600 font-bold">18 RON</span>
+                    </div>
+                    <p class="text-gray-600">70ml.</p>
+                </div>
+                
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Espresso machiatto</h3>
+                        <span class="text-blue-600 font-bold">12 RON</span>
+                    </div>
+                    <p class="text-gray-600">60ml.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Americano</h3>
+                        <span class="text-blue-600 font-bold">12 RON</span>
+                    </div>
+                    <p class="text-gray-600">100ml.</p>
+                </div>
+
+                                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Cappucino</h3>
+                        <span class="text-blue-600 font-bold">18 RON</span>
+                    </div>
+                    <p class="text-gray-600">Lapte, espresso / milk, espresso. 150ml.</p>
+                </div>
+
+
+                                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Caffe latte</h3>
+                        <span class="text-blue-600 font-bold">21 RON</span>
+                    </div>
+                    <p class="text-gray-600">Lapte, espresso / milk, espresso. 280ml.</p>
+                </div>
+
+
+                                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Flat white</h3>
+                        <span class="text-blue-600 font-bold">21 RON</span>
+                    </div>
+                    <p class="text-gray-600">Lapte, espresso / milk, espresso. 230ml.</p>
+                </div>
+
+
+                                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Irish coffee</h3>
+                        <span class="text-blue-600 font-bold">25 RON</span>
+                    </div>
+                    <p class="text-gray-600">Cafea americano, whiskey irlandez, frișcă / americano coffee, irish wiskey, whipped cream. 120ml.</p>
+                </div>
+
+
+                                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Bailey's latte</h3>
+                        <span class="text-blue-600 font-bold">25 RON</span>
+                    </div>
+                    <p class="text-gray-600">Cafea americano, cremă de whiskey, frișcă / americano coffee, wiskey cream, whipped cream. 120ml.</p>
+                </div>
+
+
+                                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Iced Ness-frappe</h3>
+                        <span class="text-blue-600 font-bold">25 RON</span>
+                    </div>
+                    <p class="text-gray-600">Lapte, frișcă lichidă, ness, inghetata / milk, cream, ness, ice cream. 200ml.</p>
+                </div>
+
+
+                                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Infuzie de ceai</h3>
+                        <span class="text-blue-600 font-bold">16 RON</span>
+                    </div>
+                    <p class="text-gray-600">Hot tea. 250ml.</p>
+                </div>
+
+
+                                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Băutură caldă cu gust de ciocolată</h3>
+                        <span class="text-blue-600 font-bold">16 RON</span>
+                    </div>
+                    <p class="text-gray-600">Lapte, pudră de ciocolată caldă instant, frișcă / milk, hot chocolate powder, whipped cream. 200ml.</p>
+                </div>
+
+
+                                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Lapte cald</h3>
+                        <span class="text-blue-600 font-bold">8 RON</span>
+                    </div>
+                    <p class="text-gray-600">Hot milk. 200ml.</p>
+                </div>
+
+
+                                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Vin fiert</h3>
+                        <span class="text-blue-600 font-bold">20 RON</span>
+                    </div>
+                    <p class="text-gray-600">Mulled wine. 250ml.</p>
+                </div>
+            </div>
+        </div> 
+
+                <!-- Sucuri proaspete si limonada / Fresh juice and lemonade (hidden by default) -->
+            <div class="container mx-auto px-4">
+             <div id="fresh" class="menu-category hidden grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Smoothie cu căpșuni, banane si afine</h3>
+                        <span class="text-blue-600 font-bold">26 RON</span>
+                    </div>
+                    <p class="text-gray-600">Suc de mere, căpşuni, banane, afine / apple juice, strawberries, bananas, blueberries. 400ml.</p>
+                </div>
+                
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Fresh juice</h3>
+                        <span class="text-blue-600 font-bold">20 RON</span>
+                    </div>
+                    <p class="text-gray-600">Portocală, grepfruit, mere, morcov / orange, grepfruit, apple, carrot. 250ml.</p>
+                </div>
+                
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Limonadă</h3>
+                        <span class="text-blue-600 font-bold">20 RON</span>
+                    </div>
+                    <p class="text-gray-600">Suc de lămâie, apă plată-minerală, sirop de zahăr-miere / lemon juice, flat-sparkling water, sugar-honey. 500ml.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Limonadă cu mentă</h3>
+                        <span class="text-blue-600 font-bold">20 RON</span>
+                    </div>
+                    <p class="text-gray-600">Suc de lămâie, mentă, apă plată-minerală, sirop de zahăr-miere / lemon juice, mint, flat-sparkling water, sugar-honey. 500ml.</p>
+                </div>
+
+                                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Limonadă cu sirop de cătină</h3>
+                        <span class="text-blue-600 font-bold">22 RON</span>
+                    </div>
+                    <p class="text-gray-600">Suc de lămâie, sirop de cătină, apă plată-minerală, sirop de zahăr-miere / lemon juice, sea buckthorn syrup, flat-sparkling water, sugar-honey. 500ml.</p>
+                </div>
+
+
+                                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Oranjadă</h3>
+                        <span class="text-blue-600 font-bold">20 RON</span>
+                    </div>
+                    <p class="text-gray-600">Suc de lămâie si portocala, apă plată-minerală, sirop de zahăr-miere / lemon and orange juice, flat-sparkling water, sugar-honey. 500ml.</p>
+                </div>
+            </div>
+        </div> 
+
+                <!-- Bauturi racoritoare / Soft drinks (hidden by default) -->
+            <div class="container mx-auto px-4">
+             <div id="soft" class="menu-category hidden grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Cola-Fanta-Sprite-Schweppes</h3>
+                        <span class="text-blue-600 font-bold">14 RON</span>
+                    </div>
+                    <p class="text-gray-600">250ml.</p>
+                </div>
+                
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Dorna apă plată-minerală</h3>
+                        <span class="text-blue-600 font-bold">10 RON</span>
+                    </div>
+                    <p class="text-gray-600">Flat-sparkling water. 330ml.</p>
+                </div>
+                
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Cappy nectar</h3>
+                        <span class="text-blue-600 font-bold">15 RON</span>
+                    </div>
+                    <p class="text-gray-600">250ml.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Fuze-tea</h3>
+                        <span class="text-blue-600 font-bold">15 RON</span>
+                    </div>
+                    <p class="text-gray-600">250ml.</p>
+                </div>
+            </div>
+        </div> 
+
+
+                        <!-- Cocktail-uri / Cocktails (hidden by default) -->
+            <div class="container mx-auto px-4">
+             <div id="cocktail" class="menu-category hidden grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Cosmopolitan</h3>
+                        <span class="text-blue-600 font-bold">25 RON</span>
+                    </div>
+                    <p class="text-gray-600">Vodka, triplu sec, fresh lime, suc de fructe roșii / vodka, triple sec, lime juice, cranberries juice. 120ml.</p>
+                </div>
+                
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Tequila sunrise</h3>
+                        <span class="text-blue-600 font-bold">25 RON</span>
+                    </div>
+                    <p class="text-gray-600">Tequila, suc de portocale, sirop grenadine / tequila, orange juice, grenadine syrup. 250ml.</p>
+                </div>
+                
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Margarita</h3>
+                        <span class="text-blue-600 font-bold">25 RON</span>
+                    </div>
+                    <p class="text-gray-600">Tequila, triplu sec, fresh de lime, sirop de zahăr / tequila, triple sec, lime juice, sugar syrup. 80ml.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Gin & Tonic</h3>
+                        <span class="text-blue-600 font-bold">25 RON</span>
+                    </div>
+                    <p class="text-gray-600">Gin, Schweppes tonic. 250ml.</p>
+                </div>
+
+                                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Surprise cocktail </h3>
+                        <span class="text-blue-600 font-bold">25 RON</span>
+                    </div>
+                    <p class="text-gray-600">Amaro, lime, Schweppes tonic. 200ml.</p>
+                </div>
+
+                                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Pink Gin Spritz</h3>
+                        <span class="text-blue-600 font-bold">29 RON</span>
+                    </div>
+                    <p class="text-gray-600">Gin roz(pink), prosecco, Sprite. 250ml.</p>
+                </div>
+
+                                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Limoncello Spritz</h3>
+                        <span class="text-blue-600 font-bold">29 RON</span>
+                    </div>
+                    <p class="text-gray-600">Limoncello, prosecco, apă minerală(sparkling water). 250ml.</p>
+                </div>
+
+                                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Cuba Libre</h3>
+                        <span class="text-blue-600 font-bold">25 RON</span>
+                    </div>
+                    <p class="text-gray-600">Rom, Coca Cola, lime. 250ml.</p>
+                </div>
+
+                                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Mojito</h3>
+                        <span class="text-blue-600 font-bold">25 RON</span>
+                    </div>
+                    <p class="text-gray-600">Rom, apă minerală, sirop de zahăr, mentă, lime / rum, sparkling water, sugar syrup, fresh mint, lime. 250ml.</p>
+                </div>
+
+                                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Campari Orange</h3>
+                        <span class="text-blue-600 font-bold">27 RON</span>
+                    </div>
+                    <p class="text-gray-600">Campari, suc de portocale, portocală / campari, orange juice, orange. 250ml.</p>
+                </div>
+
+                                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Aperol Spritz</h3>
+                        <span class="text-blue-600 font-bold">29 RON</span>
+                    </div>
+                    <p class="text-gray-600">Aperol, prosecco, apă minerală, portocală / aperol, prosecco, sparkling water, orange. 250ml.</p>
+                </div>
+
+                                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Hugo</h3>
+                        <span class="text-blue-600 font-bold">29 RON</span>
+                    </div>
+                    <p class="text-gray-600">Prosecco, apă minerală, sirop de soc, mentă, lime / prosecco, sparkling water, elderflower syrup, mint lime juice. 250ml.</p>
+                </div>
+            </div>
+        </div> 
+
+    <!-- Aperitive / Starters (hidden by default) -->
+            <div class="container mx-auto px-4">
+             <div id="starter" class="menu-category hidden grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Martini</h3>
+                        <span class="text-blue-600 font-bold">14 RON</span>
+                    </div>
+                    <p class="text-gray-600">40ml.</p>
+                </div>
+                
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Campari</h3>
+                        <span class="text-blue-600 font-bold">18 RON</span>
+                    </div>
+                    <p class="text-gray-600">40ml.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Limoncello</h3>
+                        <span class="text-blue-600 font-bold">18 RON</span>
+                    </div>
+                    <p class="text-gray-600">40ml.</p>
+                </div>
+
+                                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Kahlua </h3>
+                        <span class="text-blue-600 font-bold">18 RON</span>
+                    </div>
+                    <p class="text-gray-600">40ml.</p>
+                </div>
+
+                                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Jăgermeister</h3>
+                        <span class="text-blue-600 font-bold">20 RON</span>
+                    </div>
+                    <p class="text-gray-600">40ml.</p>
+                </div>
+
+                                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Fernet Branca Mentă</h3>
+                        <span class="text-blue-600 font-bold">20 RON</span>
+                    </div>
+                    <p class="text-gray-600">40ml.</p>
+                </div>
+
+                                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Alexandrion 5*</h3>
+                        <span class="text-blue-600 font-bold">15 RON</span>
+                    </div>
+                    <p class="text-gray-600">40ml.</p>
+                </div>
+
+                                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Metaxa 5*</h3>
+                        <span class="text-blue-600 font-bold">18 RON</span>
+                    </div>
+                    <p class="text-gray-600">40ml.</p>
+                </div>
+
+                                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Metaxa 7*</h3>
+                        <span class="text-blue-600 font-bold">20 RON</span>
+                    </div>
+                    <p class="text-gray-600">40ml.</p>
+                </div>
+
+                                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Brâncoveanu Vinars</h3>
+                        <span class="text-blue-600 font-bold">26 RON</span>
+                    </div>
+                    <p class="text-gray-600">40ml.</p>
+                </div>
+
+                                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Bailey's</h3>
+                        <span class="text-blue-600 font-bold">18 RON</span>
+                    </div>
+                    <p class="text-gray-600">40ml.</p>
+                </div>
+            </div>
+        </div>
+
+    <!-- Bauturi traditionale / Traditional drinks (hidden by default) -->
+            <div class="container mx-auto px-4">
+             <div id="btraditionale" class="menu-category hidden grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Pălincă de prune</h3>
+                        <span class="text-blue-600 font-bold">19 RON</span>
+                    </div>
+                    <p class="text-gray-600">40ml.</p>
+                </div>
+                
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Afinată</h3>
+                        <span class="text-blue-600 font-bold">19 RON</span>
+                    </div>
+                    <p class="text-gray-600">40ml.</p>
+                </div>
+                
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Vișinată</h3>
+                        <span class="text-blue-600 font-bold">19 RON</span>
+                    </div>
+                    <p class="text-gray-600">40ml.</p>
+                </div>
+            </div>
+        </div>
+
+    <!-- Gin, tequila, vodka, rum (hidden by default) -->
+            <div class="container mx-auto px-4">
+             <div id="gtvr" class="menu-category hidden grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Tanqueray Gin</h3>
+                        <span class="text-blue-600 font-bold">22 RON</span>
+                    </div>
+                    <p class="text-gray-600">40ml.</p>
+                </div>
+                
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Wembley Dry Gin</h3>
+                        <span class="text-blue-600 font-bold">16 RON</span>
+                    </div>
+                    <p class="text-gray-600">40ml.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Camino Tequila</h3>
+                        <span class="text-blue-600 font-bold">20 RON</span>
+                    </div>
+                    <p class="text-gray-600">40ml.</p>
+                </div>
+
+                                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Ciroc Vodka</h3>
+                        <span class="text-blue-600 font-bold">23 RON</span>
+                    </div>
+                    <p class="text-gray-600">40ml.</p>
+                </div>
+
+                                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Absolut Vodka</h3>
+                        <span class="text-blue-600 font-bold">18 RON</span>
+                    </div>
+                    <p class="text-gray-600">40ml.</p>
+                </div>
+
+                                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Havana Rum</h3>
+                        <span class="text-blue-600 font-bold">18 RON</span>
+                    </div>
+                    <p class="text-gray-600">40ml.</p>
+                </div>
+
+                                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Diplomatico Rum</h3>
+                        <span class="text-blue-600 font-bold">30 RON</span>
+                    </div>
+                    <p class="text-gray-600">40ml.</p>
+                </div>
+
+
+                                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Bumbu Rum</h3>
+                        <span class="text-blue-600 font-bold">30 RON</span>
+                    </div>
+                    <p class="text-gray-600">40ml.</p>
+                </div>
+            </div>
+        </div>
+
+                <!-- Whiskey (hidden by default) -->
+            <div class="container mx-auto px-4">
+             <div id="whiskey" class="menu-category hidden grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Ballantine's</h3>
+                        <span class="text-blue-600 font-bold">18 RON</span>
+                    </div>
+                    <p class="text-gray-600">40ml.</p>
+                </div>
+                
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Wild Turkey Rare Breed</h3>
+                        <span class="text-blue-600 font-bold">26 RON</span>
+                    </div>
+                    <p class="text-gray-600">40ml.</p>
+                </div>
+                
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Jack Daniel's</h3>
+                        <span class="text-blue-600 font-bold">22 RON</span>
+                    </div>
+                    <p class="text-gray-600">40ml.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Chivas Regal</h3>
+                        <span class="text-blue-600 font-bold">30 RON</span>
+                    </div>
+                    <p class="text-gray-600">40ml.</p>
+                </div>
+
+                                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Jameson</h3>
+                        <span class="text-blue-600 font-bold">22 RON</span>
+                    </div>
+                    <p class="text-gray-600">40ml.</p>
+                </div>
+            </div>
+        </div>
+
+                        <!-- Bere / Beer (hidden by default) -->
+            <div class="container mx-auto px-4">
+             <div id="bere" class="menu-category hidden grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Draught Beck's</h3>
+                        <span class="text-blue-600 font-bold">16 RON</span>
+                    </div>
+                    <p class="text-gray-600">400ml.</p>
+                </div>
+                
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Bere lager Staropramen</h3>
+                        <span class="text-blue-600 font-bold">14 RON</span>
+                    </div>
+                    <p class="text-gray-600">500ml.</p>
+                </div>
+                
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Bere lager Staropramen dark</h3>
+                        <span class="text-blue-600 font-bold">14 RON</span>
+                    </div>
+                    <p class="text-gray-600">330ml.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Bere lager Stella Artois</h3>
+                        <span class="text-blue-600 font-bold">16 RON</span>
+                    </div>
+                    <p class="text-gray-600">500ml.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Bere lager Beck's</h3>
+                        <span class="text-blue-600 font-bold">16 RON</span>
+                    </div>
+                    <p class="text-gray-600">500ml.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Bere romaneasca Bergenbier</h3>
+                        <span class="text-blue-600 font-bold">13 RON</span>
+                    </div>
+                    <p class="text-gray-600">500ml.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Bere romaneasca Caraiman</h3>
+                        <span class="text-blue-600 font-bold">13 RON</span>
+                    </div>
+                    <p class="text-gray-600">500ml.</p>
+                </div>
+
+                 <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Bere de import Corona</h3>
+                        <span class="text-blue-600 font-bold">25 RON</span>
+                    </div>
+                    <p class="text-gray-600">355ml.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Bere de import Leffe blond</h3>
+                        <span class="text-blue-600 font-bold">25 RON</span>
+                    </div>
+                    <p class="text-gray-600">330ml.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Bere de import Leffe brun</h3>
+                        <span class="text-blue-600 font-bold">25 RON</span>
+                    </div>
+                    <p class="text-gray-600">330ml.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Bere de import Franziskaner nefiltrată</h3>
+                        <span class="text-blue-600 font-bold">28 RON</span>
+                    </div>
+                    <p class="text-gray-600">500ml.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Bere fără alcool Stella Artois 0.0%</h3>
+                        <span class="text-blue-600 font-bold">15 RON</span>
+                    </div>
+                    <p class="text-gray-600">330ml.</p>
+                </div>
+
+                 <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Bere fără alcool Fresh 0.0%</h3>
+                        <span class="text-blue-600 font-bold">15 RON</span>
+                    </div>
+                    <p class="text-gray-600">330ml.</p>
+                </div>
+            </div>
+        </div> 
+
+        <!-- Vin / Wine (hidden by default) -->
+            <div class="container mx-auto px-4">
+             <div id="vin" class="menu-category hidden grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Sauvignon Blanc</h3>
+                        <span class="text-blue-600 font-bold">20 RON</span>
+                    </div>
+                    <p class="text-gray-600">CRAMA LICORNA SERAFIM. 170ml.</p>
+                </div>
+                
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Roze</h3>
+                        <span class="text-blue-600 font-bold">20 RON</span>
+                    </div>
+                    <p class="text-gray-600">CRAMA LICORNA SERAFIM. 170ml.</p>
+                </div>
+                
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Feteasca neagra</h3>
+                        <span class="text-blue-600 font-bold">20 RON</span>
+                    </div>
+                    <p class="text-gray-600">CRAMA LICORNA SERAFIM. 170ml.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">La Gioiosa Prosecco</h3>
+                        <span class="text-blue-600 font-bold">30 RON</span>
+                    </div>
+                    <p class="text-gray-600">200ml.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Anno Fetească Neagră Flora</h3>
+                        <span class="text-blue-600 font-bold">140 RON</span>
+                    </div>
+                    <p class="text-gray-600">CRAMA LICORNA.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Anno Roze Francesca</h3>
+                        <span class="text-blue-600 font-bold">140 RON</span>
+                    </div>
+                    <p class="text-gray-600">CRAMA LICORNA.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Anno Fetească Neagră Cocoșul Negru</h3>
+                        <span class="text-blue-600 font-bold">170 RON</span>
+                    </div>
+                    <p class="text-gray-600">CRAMA LICORNA.</p>
+                </div>
+
+                 <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Serafim</h3>
+                        <span class="text-blue-600 font-bold">90 RON</span>
+                    </div>
+                    <p class="text-gray-600">CRAMA LICORNA. Roze, Fetească regală.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Aligote</h3>
+                        <span class="text-blue-600 font-bold">150 RON</span>
+                    </div>
+                    <p class="text-gray-600">CAII DE LA LETEA VOL. II.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Roze</h3>
+                        <span class="text-blue-600 font-bold">150 RON</span>
+                    </div>
+                    <p class="text-gray-600">CAII DE LA LETEA VOL. II.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Cabernet-Fetească neagră cupaj</h3>
+                        <span class="text-blue-600 font-bold">150 RON</span>
+                    </div>
+                    <p class="text-gray-600">CAII DE LA LETEA VOL. II.</p>
+                </div>
+
+                <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Solo Quinta</h3>
+                        <span class="text-blue-600 font-bold">200 RON</span>
+                    </div>
+                    <p class="text-gray-600">CRAMA RECAS.</p>
+                </div>
+
+                 <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Selene Cabernet Sauvignon</h3>
+                        <span class="text-blue-600 font-bold">170 RON</span>
+                    </div>
+                    <p class="text-gray-600">CRAMA RECAS.</p>
+                </div>
+
+                                 <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Muse</h3>
+                        <span class="text-blue-600 font-bold">160 RON</span>
+                    </div>
+                    <p class="text-gray-600">CRAMA RECAS.</p>
+                </div>
+
+                                 <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Sole Chardonnay</h3>
+                        <span class="text-blue-600 font-bold">200 RON</span>
+                    </div>
+                    <p class="text-gray-600">CRAMA RECAS.</p>
+                </div>
+
+                                 <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Castel Huniade</h3>
+                        <span class="text-blue-600 font-bold">90 RON</span>
+                    </div>
+                    <p class="text-gray-600">CRAMA RECAS. Fetească Regală, merlot, roze.</p>
+                </div>
+
+                                 <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Terra di Marca</h3>
+                        <span class="text-blue-600 font-bold">150 RON</span>
+                    </div>
+                    <p class="text-gray-600">PROSECCO. 750ml.</p>
+                </div>
+
+                                 <div class="menu-item bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">Cricova Crisecco</h3>
+                        <span class="text-blue-600 font-bold">105 RON</span>
+                    </div>
+                    <p class="text-gray-600">PROSECCO. 750ml.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gray-50 parallax" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4bab7a1e0ab7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-black mb-4">Părerile clienților noștri</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white bg-opacity-90 p-6 rounded-lg shadow-lg flex flex-col justify-between h-full">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4 flex-1">De fiecare dată când ajungem în Sinaia, mâncăm doar la Avalanche – e locul nostru preferat! Mâncarea e mereu super gustoasă, porții generoase și totul proaspăt. Iar servirea e impecabilă – oamenii de acolo sunt foarte prietenoși și atenți, te fac să te simți ca acasă. Recomand din toată inima!</p>
+                    <div class="flex items-center">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Diana Mihai</h4>
+                            <p class="text-sm text-gray-600">București</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white bg-opacity-90 p-6 rounded-lg shadow-lg flex flex-col justify-between h-full">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4 flex-1">Recomand cu mare drag. Mâncarea este gustoasă, prețurile decente, servirea bună. Dacă călătoriți cu copilul, găsiți preparate potrivite pentru cei mici și cărți de colorat. O experiență plăcută!</p>
+                    <div class="flex items-center">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Andreea Costea</h4>
+                            <p class="text-sm text-gray-600">Tulcea</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white bg-opacity-90 p-6 rounded-lg shadow-lg flex flex-col justify-between h-full">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4 flex-1">Amazing food and staff right in the town centre, highly recommend!👌</p>
+                    <div class="flex items-center">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Samantha Southall-Savu</h4>
+                            <p class="text-sm text-gray-600">Liverpool</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Contact</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Suntem aici pentru orice întrebare sau rezervare</p>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Informații de contact</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-blue-600 text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Adresă</h4>
+                                <p class="text-gray-600">Cuza Voda, 2B, Sinaia, Romania, 106100</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-phone-alt text-blue-600 text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Telefon</h4>
+                                <p class="text-gray-600">+40 744 359 059</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fab fa-whatsapp text-blue-600 text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-800">WhatsApp</h4>
+                                <p class="text-gray-600">+40 721 367 780</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <i class="fas fa-envelope text-blue-600 text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Email</h4>
+                                <p class="text-gray-600">office.avalancherestaurant@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-clock text-blue-600 text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Program</h4>
+                                <p class="text-gray-600">Luni - Joi: 10:00 - 22:00</p>
+                                <p class="text-gray-600">Vineri - Duminică: 09:00 - 22:00</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold text-gray-800 mb-4">Urmărește-ne pe social media</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://www.facebook.com/avalancherestaurantsinaia/" target="_blank" class="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-700 transition">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/avalancherestaurant?igsh=Zng2c296dTcyNHJh" target="_blank" class="bg-pink-600 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-pink-700 transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                    
+                <div class="mt-8">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">Verifică dacă avem locuri libere</h3>
+                <form action="https://formsubmit.co/office.avalancherestaurant@gmail.com" method="POST" class="space-y-4">
+                    
+                    <!-- Hidden inputs FormSubmit -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_subject" value="Cerere rezervare de pe site!">
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="reservation-name" class="block text-gray-700 mb-2">Nume</label>
+                        <input type="text" id="reservation-name" name="name" required
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                    </div>
+                    <div>
+                        <label for="reservation-email" class="block text-gray-700 mb-2">Email</label>
+                        <input type="email" id="reservation-email" name="email" required
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                    </div>
+                    <div>
+                        <label for="reservation-phone" class="block text-gray-700 mb-2">Telefon</label>
+                        <input type="tel" id="reservation-phone" name="phone" required
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                    </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div>
+                        <label for="reservation-date" class="block text-gray-700 mb-2">Data</label>
+                        <input type="date" id="reservation-date" name="date" required
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                    </div>
+                    <div>
+                        <label for="reservation-time" class="block text-gray-700 mb-2">Ora</label>
+                        <input type="time" id="reservation-time" name="time" min="09:00" max="21:30" required
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                    </div>
+                    <div>
+                        <label for="reservation-guests" class="block text-gray-700 mb-2">Persoane</label>
+                        <select id="reservation-guests" name="guests" required
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                        <option value="">Selectează</option>
+                        <option value="1">1 persoană</option>
+                        <option value="2">2 persoane</option>
+                        <option value="3">3 persoane</option>
+                        <option value="4">4 persoane</option>
+                        <option value="5+">5+ persoane</option>
+                        </select>
+                    </div>
+                    </div>
+
+                    <button type="submit"
+                            class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition w-full">
+                    Verifică acum
+                    </button>
+                </form>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <div class="h-96 w-full">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2712.7292887742865!2d25.5405263!3d45.3433714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b34eeb0067e3f7%3A0x5ea620f8d49c2c63!2sStrada%20Cuza%20Vod%C4%83%202B%2C%20Sinaia%20106100!5e0!3m2!1sro!2sro!4v1715764651571!5m2!1sro!2sro" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-snowflake text-blue-400 text-2xl mr-2"></i>
+                        <h3 class="text-xl font-bold">Avalanche</h3>
+                    </div>
+                    <p class="text-gray-400">Restaurant Avalanche - o experiență culinară de neuitat în inima munților, Sinaia.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Link-uri rapide</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#acasa" class="text-gray-400 hover:text-white transition">Acasă</a></li>
+                        <li><a href="#despre" class="text-gray-400 hover:text-white transition">Despre Noi</a></li>
+                        <li><a href="#meniu" class="text-gray-400 hover:text-white transition">Meniu</a></li>
+                        <li><a href="#galerie" class="text-gray-400 hover:text-white transition">Galerie</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Program</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex justify-between"><span>Luni - Joi:</span> <span>10:00 - 22:00</span></li>
+                        <li class="flex justify-between"><span>Vineri - Duminică:</span> <span>09:00 - 22:00</span></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Abonează-te la newsletter-ul nostru pentru promoții și evenimente speciale.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Email" class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-800 w-full">
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-lg">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 Restaurant Avalanche Sinaia. Toate drepturile rezervate.</p>
+    <!-- Informații legale și de contact -->
+            <div class="mt-2 text-xs text-gray-500 space-y-1">
+                <p>SC DOMALCO FOODS SRL | CUI: RO40522429 | Nr. Reg. Com: J29/567/2019</p>
+                <p>Strada Cuza Vodă 2B, Sinaia 106100, România</p>
+                <p>Tel: +40 744 359 059 | Email: office.avalancherestaurant@gmail.com</p>
+            </div>
+    <!-- Buton ANPC SAL -->
+                 <div class="mt-4 flex flex-wrap justify-center items-center gap-4">
+                <a href="https://anpc.ro/ce-este-sal/" target="_blank" rel="noopener">
+                    <img src="https://kitamaru.ro/images/anpc/anpc-sal.svg" alt="Soluționarea Alternativă a Litigiilor ANPC" class="h-8">
+                </a>
+
+    <!-- Buton SOL (siglă oficială) -->
+                <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">
+                     <img src="https://kitamaru.ro/images/anpc/anpc-sol.svg" alt="Soluționarea Online a Litigiilor" class="h-8">
+                </a>
+            </div>
+                <div class="flex space-x-6">
+                    <a href="https://www.facebook.com/avalancherestaurantsinaia/" target="_blank" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/avalancherestaurant?igsh=Zng2c296dTcyNHJh" target="_blank" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-tripadvisor"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-blue-600 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center hover:bg-blue-700 transition opacity-0 invisible">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Menu Category Tabs
+        const menuCategoryButtons = document.querySelectorAll('.menu-category-btn');
+        const menuCategories = document.querySelectorAll('.menu-category');
+        
+        menuCategoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                menuCategoryButtons.forEach(btn => {
+                    btn.classList.remove('active', 'bg-blue-600', 'text-white');
+                    btn.classList.add('bg-gray-200', 'text-gray-700');
+                });
+                
+                // Add active class to clicked button
+                button.classList.add('active', 'bg-blue-600', 'text-white');
+                button.classList.remove('bg-gray-200', 'text-gray-700');
+                
+                // Hide all categories
+                menuCategories.forEach(category => {
+                    category.classList.add('hidden');
+                });
+                
+                // Show selected category
+                const categoryId = button.getAttribute('data-category');
+                document.getElementById(categoryId).classList.remove('hidden');
+            });
+        });
+        
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+
+    <!-- Popup Modal -->
+<div id="reservation-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 text-center">
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Verificare în curs de desfășurare</h3>
+        <p class="text-gray-600 mb-2">Vă rugăm așteptați până veți fi contactat!</p>
+        <button id="close-modal" class="mt-6 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-semibold transition">
+            Închide
+        </button>
+    </div>
+</div>
+
+<script>
+    const form = document.querySelector('#contact form');
+    const modal = document.getElementById('reservation-modal');
+    const closeModalBtn = document.getElementById('close-modal');
+
+form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // Arată popup-ul
+    modal.classList.remove('hidden');
+    modal.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+    // Trimite formularul după 2 secunde
+    setTimeout(() => {
+        form.submit();
+    }, 2000);
+});
+
+    // Închide popup-ul și resetează formularul
+    closeModalBtn.addEventListener('click', function () {
+        modal.classList.add('hidden');
+        form.reset(); // 🔁 Resetează toate câmpurile
+    });
+</script>
+
+<script>
+    const dateInput = document.getElementById('reservation-date');
+
+    // Setează data minimă la azi
+    const today = new Date();
+    const yyyy = today.getFullYear();
+    const mm = String(today.getMonth() + 1).padStart(2, '0');
+    const dd = String(today.getDate()).padStart(2, '0');
+    const todayStr = `${yyyy}-${mm}-${dd}`;
+    dateInput.setAttribute('min', todayStr);
+
+    // Validare personalizată dacă e introdusă manual o dată invalidă
+    dateInput.addEventListener('input', function () {
+        if (this.value < todayStr) {
+            this.setCustomValidity("Nu poți selecta o dată din trecut.");
+        } else {
+            this.setCustomValidity("");
+        }
+    });
+
+    // Revalidare la trimiterea formularului
+    form.addEventListener('submit', function (e) {
+        if (!dateInput.checkValidity()) {
+            dateInput.reportValidity();
+            e.preventDefault();
+        }
+    });
+</script>
+
+<script>
+document.querySelectorAll('.menu-category-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        const selectedCategory = button.dataset.category;
+
+        // Ascundem toate categoriile
+        document.querySelectorAll('.menu-category').forEach(cat => {
+            cat.classList.add('hidden');
+        });
+
+        // Arătăm categoria selectată
+        const section = document.getElementById(selectedCategory);
+        section.classList.remove('hidden');
+
+        // Așteptăm puțin pentru ca afișarea să se aplice, apoi scrollăm cu offset
+        setTimeout(() => {
+            const firstItem = section.querySelector('.menu-item');
+            if (firstItem) {
+                const yOffset = -80; // ajustează aici dacă e prea sus/jos
+                const y = firstItem.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+                window.scrollTo({
+                    top: y,
+                    behavior: 'smooth'
+                });
+            }
+        }, 100);
+    });
+});
+</script>
+
+<!-- Modal pentru imagine -->
+<div id="imageModal" class="fixed inset-0 bg-black bg-opacity-70 z-50 hidden items-center justify-center p-4">
+    <div class="relative max-w-full max-h-full">
+        <img id="modalImage" src="" alt="Poză ofertă" class="max-w-full max-h-screen rounded-lg object-contain cursor-zoom-in transition-transform duration-200" onclick="toggleZoom()">
+        <button onclick="closeModal()" class="absolute top-2 right-2 text-white text-2xl font-bold">&times;</button>
+    </div>
+</div>
+
+<script>
+let zoomed = false;
+
+function openModal(src) {
+    const modal = document.getElementById('imageModal');
+    const img = document.getElementById('modalImage');
+    img.src = src;
+    img.style.transform = 'scale(1)';
+    zoomed = false;
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+}
+
+function closeModal() {
+    const modal = document.getElementById('imageModal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+}
+
+function toggleZoom() {
+    const img = document.getElementById('modalImage');
+    zoomed = !zoomed;
+    img.style.transform = zoomed ? 'scale(2)' : 'scale(1)';
+    img.style.cursor = zoomed ? 'zoom-out' : 'zoom-in';
+}
+</script>
+
+<!-- Overlay blur și modal rezumat termeni -->
+<div id="overlay" style="
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+">
+  <div id="consentModal" style="
+    background: white;
+    padding: 25px 30px;
+    border-radius: 10px;
+    max-width: 400px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    text-align: center;
+  ">
+    <h2 style="margin-top:0;">Termeni și Condiții de utilizare</h2>
+    <p>Acest site folosește Google Maps și colectează date prin formularul de rezervare.<br>Folosind site-ul, accepți <a href="#" id="readMoreLink" style="color:#0d63e4;text-decoration:underline;cursor:pointer;">Termenii și Condițiile</a>.</p>
+    <div style="margin-top: 20px;">
+      <button id="acceptBtn" style="
+        background:#0d63e4;
+        color:#fff;
+        border:none;
+        padding:10px 20px;
+        margin-right: 10px;
+        cursor:pointer;
+        border-radius: 5px;
+        font-size: 16px;
+      ">Accept termenii</button>
+    </div>
+  </div>
+</div>
+
+<!-- Fereastră modală Termeni Compleți -->
+<div id="termsModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);z-index:10001;overflow:auto;">
+  <div style="background:#fff;color:#000;max-width:600px;margin:50px auto;padding:20px;border-radius:8px;position:relative;">
+    <h2>Termeni și Condiții de utilizare și Politica de confidențialitate</h2>
+    <p><strong>Colectarea datelor personale:</strong> Prin formularul de rezervare colectăm date personale, cum ar fi numele, numărul de telefon, adresa de email și detaliile rezervării. Datele sunt folosite exclusiv pentru procesarea rezervării și nu sunt partajate cu terți.</p>
+    <p><strong>Google Maps:</strong> Site-ul încorporează Google Maps pentru afișarea locației. Google poate colecta date și seta cookie-uri conform politicii sale de confidențialitate. Nu controlăm aceste date.</p>
+    <p><strong>Drepturile tale:</strong> Ai dreptul să accesezi, să corectezi sau să ștergi datele tale personale, să te opui prelucrării acestora și să retragi consimțământul oricând, contactându-ne la adresa de email <em>office.avalancherestaurant@gmail.com</em>.</p>
+    <p><strong>Păstrarea datelor:</strong> Datele vor fi păstrate numai pe durata necesară gestionării rezervării și conform legislației în vigoare.</p>
+    <p><strong>Acceptarea termenilor:</strong> Pentru a folosi site-ul și a trimite rezervări, trebuie să accepți acești termeni și condiții.</p>
+
+    <div style="margin-top:30px; text-align:right;">
+      <button id="acceptModalBtn" style="background:#0d63e4;color:#fff;border:none;padding:10px 15px;margin-right:10px;cursor:pointer;">Accept</button>
+      <button id="rejectModalBtn" style="background:#f44336;color:#fff;border:none;padding:10px 15px;cursor:pointer;">Respinge și părăsește site-ul</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const overlay = document.getElementById('overlay');
+  const acceptBtn = document.getElementById('acceptBtn');
+  const readMoreLink = document.getElementById('readMoreLink');
+  const termsModal = document.getElementById('termsModal');
+  const acceptModalBtn = document.getElementById('acceptModalBtn');
+  const rejectModalBtn = document.getElementById('rejectModalBtn');
+
+  // Dacă s-a acceptat deja, ascundem overlay-ul
+  if(localStorage.getItem('termsAccepted') === 'true') {
+    overlay.style.display = 'none';
+  } else {
+    overlay.style.display = 'flex';
+    // Dezactivează scrollul paginii când modalul e afișat
+    document.body.style.overflow = 'hidden';
+  }
+
+  acceptBtn.onclick = () => {
+    localStorage.setItem('termsAccepted', 'true');
+    overlay.style.display = 'none';
+    document.body.style.overflow = '';
+  };
+
+  readMoreLink.onclick = (e) => {
+    e.preventDefault();
+    termsModal.style.display = 'block';
+  };
+
+  acceptModalBtn.onclick = () => {
+    localStorage.setItem('termsAccepted', 'true');
+    termsModal.style.display = 'none';
+    overlay.style.display = 'none';
+    document.body.style.overflow = '';
+  };
+
+  rejectModalBtn.onclick = () => {
+    window.location.href = 'https://www.google.com';
+  };
+
+  // Când modalul complet este deschis, dezactivăm scrollul paginii
+  termsModal.addEventListener('scroll', () => {
+    document.body.style.overflow = 'hidden';
+  });
+</script>
+
+<style>
+  @media (max-width: 480px) {
+    #termsModal div[style*="text-align:right"] button {
+      display: block;
+      width: 100%;
+      margin-bottom: 12px !important;
+    }
+  }
+</style>
+
+<style>
+  @media (max-width: 640px) {
+    /* Pe mobil, distanțăm grupul ANPC + SOL */
+    footer > div.container > div.border-t > div.mt-4 {
+      margin-bottom: 20px; /* spațiu sub ANPC + SOL */
+    }
+  }
+</style>
+
+<script>
+  const toggleBtn = document.getElementById('toggle-gallery-btn');
+  const extraImages = document.querySelectorAll('.extra-gallery');
+  const gallerySection = document.getElementById('galerie');
+
+  toggleBtn.addEventListener('click', () => {
+    const areHidden = extraImages[0].classList.contains('hidden');
+
+    extraImages.forEach(img => img.classList.toggle('hidden'));
+
+    if (areHidden) {
+      toggleBtn.textContent = 'Arată mai puțin';
+    } else {
+      toggleBtn.textContent = 'Arată mai mult';
+
+      // Scroll înapoi la începutul galeriei
+      gallerySection.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+</script>
+</body>
+</html>
